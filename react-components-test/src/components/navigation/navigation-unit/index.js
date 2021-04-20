@@ -16,10 +16,7 @@ const StyledNavUnit = styled.a`
   &:last-child {
     margin-bottom: 0;
   }
-  &:hover {
-    background-color: #fff;
-  }
-`;
+`
 
 const NavUnit = ({icon, text, isActive}) => {
   return(

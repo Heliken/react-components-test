@@ -1,6 +1,10 @@
+import Page from '../../components/page';
+
 const Dashboard = () => {
   return(
-    <div>dashboard</div>
+    <Page>
+      dashboard
+    </Page>
   )
 }
 export default Dashboard;
