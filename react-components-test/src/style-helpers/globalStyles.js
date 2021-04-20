@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
   body {
     font-size: 14px;
     line-height: 17px;
@@ -9,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
   }
   *,*:before,*:after{
     box-sizing:border-box;
+  }
+  a{
+    text-decoration:none;
+    color:inherit;
   }
 `
 
