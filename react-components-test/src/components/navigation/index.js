@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../../constants';
 import NavUnit from './navigation-unit';
 
 const navObj = [

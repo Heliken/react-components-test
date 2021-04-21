@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Icon from '../../icon';
-import { colors } from '../../../constants';
 
 const StyledNavUnit = styled.a`
   display: flex;
