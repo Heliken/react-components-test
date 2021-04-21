@@ -9,7 +9,7 @@ const StyledIcon = styled.svg`
 
 const Icon = ({fill, name, width, height}) => {
   return(
-    <StyledIcon fill={fill} width={width} height={height}>
+    <StyledIcon fill={fill} stroke={fill} width={width} height={height}>
       <use xlinkHref={`#${name}`}></use>
     </StyledIcon>
   )
