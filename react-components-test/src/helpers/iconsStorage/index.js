@@ -8,6 +8,9 @@ const IconsStorage = () => {
   return(
     <StyledIconsStorage>
       <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="arrow-dropdown" viewBox='0 0 20 20'>
+          <path d="M5.83331 8.33334L9.99998 12.5L14.1666 8.33334H5.83331Z"/>
+        </symbol>
         <symbol id="chevron" viewBox='0 0 24 24'>
           <path d="M15 18L9 12L15 6" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
         </symbol>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GlobalStyles from './style-helpers/globalStyles';
-import IconsStorage from './components/iconsStorage';
+import GlobalStyles from './helpers/globalStyles';
+import IconsStorage from './helpers/iconsStorage';
 import App from './App';
 
 ReactDOM.render(
