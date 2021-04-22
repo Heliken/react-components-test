@@ -1,48 +1,11 @@
+import {useState} from 'react';
 import styled from 'styled-components';
-import { colors, breakpoints } from '../../constants';
+import { colors, breakpoints, months } from '../../constants';
 import { scrollbarStyles } from '../../helpers/style-helpers';
+import dummyData from '../../helpers/dummy-data';
 import Page from '../../components/page';
 import Select from '../../components/select';
 import Table from '../../components/table';
-
-const monthsArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-const tableDataSample = {
-  'Date': {
-    val:'January 06, 2020',
-    icon:{
-      color: colors.textPrimary,
-      name: 'user-check',
-      size: 20
-    },
-  },
-  'Shift type': {
-    val: 'Afternoon',
-    icon: false,
-  },
-  'Period': {
-    val: '15:00 - 23:00',
-    icon: {
-      color: `${colors.textPrimary}80`,
-      name: 'clock',
-      size:  18
-    },
-  },
-  'Hours': {
-    val: '8h',
-    icon: false
-  },
-  'Salary (gross)': {
-    val: '$1,630',
-    icon: false
-  },
-  'Bonus (gross)': {
-    val: '30',
-    icon: false
-  }
-}
-const tableDataGenerated = new Array(15).fill(tableDataSample);
-
 
 const DashboardHeader=styled.div`
   display:flex;
@@ -85,14 +48,16 @@ const DashboardBody=styled.div`
 `
 
 const Dashboard = () => {
+  const [month, setMonth] = useState(months[0]);
+
   return(
     <Page>
       <DashboardHeader>
-        <DashBoardTitle>All Shifts for <span>January 2021</span></DashBoardTitle>
-        <Select values={monthsArray}/>
+        <DashBoardTitle>All Shifts for <span>{month} 2021</span></DashBoardTitle>
+        <Select values={months} currentValue={month} setValue={setMonth}/>
       </DashboardHeader>
       <DashboardBody>
-        <Table data={tableDataGenerated}/>
+        <Table data={dummyData[month]}/>
       </DashboardBody>
     </Page>
   )

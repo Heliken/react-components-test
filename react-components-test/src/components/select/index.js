@@ -59,14 +59,13 @@ const SelectUnit = styled.div`
   }
 `
 
-const Select = ({values,defaultValue}) => {
+const Select = ({values, currentValue, setValue}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [title, setTitle] = useState(defaultValue ? defaultValue : values[0]);
 
   const selectUnits = values.map((val) => <SelectUnit
     key={val} 
     onClick={() => {
-      setTitle(val);
+      setValue(val);
       setIsOpen(false)
     }}>
       {val}
@@ -74,7 +73,7 @@ const Select = ({values,defaultValue}) => {
   return(
     <StyledSelect>
       <SelectHeader onClick={()=> setIsOpen(!isOpen)}>
-        <span>{title}, 2021</span>
+        <span>{currentValue}, 2021</span>
         <Icon name='arrow-dropdown'/>
       </SelectHeader>
       <SelectBody show={isOpen}>
