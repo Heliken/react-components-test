@@ -18,7 +18,7 @@ const StyledNavUnit = styled.a`
   &:hover{
     color:${colors.accent}
   }
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     margin-bottom:1px;
   }
 `

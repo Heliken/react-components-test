@@ -19,7 +19,7 @@ const SelectHeader = styled.div`
   &:hover{
     border-color:${colors.accent};
   }
-  @media (max-width:${breakpoints.mobile}){
+  @media (max-width:${breakpoints.mobile}px){
     font-size:12px;
     padding:11px 9px 11px 16px;
   }
@@ -27,7 +27,7 @@ const SelectHeader = styled.div`
     margin-left: 19px;
     transition:transform .3s ease-in-out;
     transform:rotate(${props => props.isOpen ? '180':'0'}deg);
-    @media (max-width:${breakpoints.mobile}){
+    @media (max-width:${breakpoints.mobile}px){
       margin-left:10px;
     }
   }
@@ -47,7 +47,7 @@ const SelectBody = styled.div`
   opacity:${props => props.show ? '1':'0'};
   visibility:${props => props.show ? 'visible':'hidden'};
   transition:opacity .3s ease-in-out, visibility .3s ease-in-out;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     right:inherit;
     left:0;
   }

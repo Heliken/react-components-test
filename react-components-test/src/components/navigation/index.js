@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import NavUnit from './navigation-unit';
+import NavUnit from './navigationUnit';
 import { breakpoints } from '../../constants';
 
 const navObj = [
@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
   display:flex;
   flex-direction:column;
   align-items: stretch;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     font-size: 12px;
     line-height: 15px;
     padding-left: 2px;

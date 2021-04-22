@@ -12,12 +12,12 @@ const DashboardHeader=styled.div`
   align-items:flex-end;
   justify-content:space-between;
   margin-bottom: 12px;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     flex-direction:column;
     justify-content:flex-start;
     align-items:flex-start;
   }
-  @media (max-width:${breakpoints.mobile}){
+  @media (max-width:${breakpoints.mobile}px){
     margin-bottom: 4px;
   }
 `
@@ -28,10 +28,10 @@ const DashBoardTitle=styled.h1`
   line-height:48px;
   margin:0;
   margin-right:20px;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     margin-bottom:15px;
   }
-  @media (max-width:${breakpoints.mobile}){
+  @media (max-width:${breakpoints.mobile}px){
     font-size: 24px;
     line-height: 29px;
   }
@@ -41,7 +41,7 @@ const DashBoardTitle=styled.h1`
   
 `
 const DashboardBody=styled.div`
-  @media (max-width:${breakpoints.mobile}){
+  @media (max-width:${breakpoints.mobile}px){
     ${scrollbarStyles};
     padding-top:11px;
     flex:1;

@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   align-items:center;
   display:none;
   z-index:10;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     display:flex;
   }
 `;

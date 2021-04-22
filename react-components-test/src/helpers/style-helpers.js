@@ -10,7 +10,7 @@ export const scrollbarStyles=`
     border-radius:2.5px;
     background-color:${colors.textSecondary}
   }
-  @media (max-width:${breakpoints.mobile}){
+  @media (max-width:${breakpoints.mobile}px){
     &::-webkit-scrollbar {
       width:3px;
       border-radius:1.5px;

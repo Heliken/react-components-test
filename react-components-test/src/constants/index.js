@@ -8,9 +8,9 @@ export const colors = {
 };
 
 export const breakpoints = {
-  smallDesktop:`1200px`,
-  tablet:'1024px',
-  mobile:'600px'
+  smallDesktop:1200,
+  tablet:1024,
+  mobile:750,
 }
 
 export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

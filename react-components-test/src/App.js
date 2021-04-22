@@ -7,7 +7,7 @@ import { breakpoints } from './constants';
 
 const PageBody=styled.div`
   margin-left:247px;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     margin-left:0;
     padding-top:55px;
   }

@@ -8,13 +8,13 @@ const SidebarControls=styled.div`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     order:-1;
     margin-bottom:24px;
   }
   ${Button}{
     display:none;
-    @media (max-width:${breakpoints.tablet}){
+    @media (max-width:${breakpoints.tablet}px){
       display:block;
       margin-right:12px;
     }
@@ -32,7 +32,7 @@ const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     padding: 30px 17px;
     justify-content:flex-start;
     transition:opacity .3s linear,visibility .3s linear;

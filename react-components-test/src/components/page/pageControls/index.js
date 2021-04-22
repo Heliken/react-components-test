@@ -9,7 +9,7 @@ const StyledPageControls=styled.div`
   justify-content:space-between;
   align-items:center;
   margin-bottom:46px;
-  @media (max-width:${breakpoints.tablet}){
+  @media (max-width:${breakpoints.tablet}px){
     display:none;
   }
 `
