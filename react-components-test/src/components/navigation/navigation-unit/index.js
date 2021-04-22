@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Icon from '../../icon';
-import { breakpoints } from '../../../constants';
+import { colors, breakpoints } from '../../../constants';
 const StyledNavUnit = styled.a`
   display: flex;
   align-items: center;
@@ -8,12 +8,15 @@ const StyledNavUnit = styled.a`
   padding: 10px 12px;
   border-radius: 8px;
   margin-bottom: 10px;
-  transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out,color .3s ease-in-out;
   svg {
     margin-right: 16px;
   }
   &:last-child {
     margin-bottom: 0;
+  }
+  &:hover{
+    color:${colors.accent}
   }
   @media (max-width:${breakpoints.tablet}){
     margin-bottom:1px;

@@ -12,10 +12,12 @@ const DashboardHeader=styled.div`
   align-items:flex-end;
   justify-content:space-between;
   margin-bottom: 12px;
-  @media (max-width:${breakpoints.mobile}){
+  @media (max-width:${breakpoints.tablet}){
     flex-direction:column;
     justify-content:flex-start;
     align-items:flex-start;
+  }
+  @media (max-width:${breakpoints.mobile}){
     margin-bottom: 4px;
   }
 `
@@ -26,19 +28,22 @@ const DashBoardTitle=styled.h1`
   line-height:48px;
   margin:0;
   margin-right:20px;
-  span{
-    color:${colors.accent}
+  @media (max-width:${breakpoints.tablet}){
+    margin-bottom:15px;
   }
   @media (max-width:${breakpoints.mobile}){
     font-size: 24px;
     line-height: 29px;
-    margin-bottom:15px;
   }
+  span{
+    color:${colors.accent};
+  }
+  
 `
 const DashboardBody=styled.div`
   @media (max-width:${breakpoints.mobile}){
-    padding-top:11px;
     ${scrollbarStyles};
+    padding-top:11px;
     flex:1;
     overflow-x:hidden;
     overflow-y:auto;

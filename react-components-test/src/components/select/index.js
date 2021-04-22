@@ -15,16 +15,23 @@ const SelectHeader = styled.div`
   padding:11px 16px;
   cursor:pointer;
   white-space: nowrap;
-  svg{
-    margin-left: 19px;
-    @media (max-width:${breakpoints.mobile}){
-      margin-left:10px;
-    }
+  transition:border-color .3s ease-in-out;
+  &:hover{
+    border-color:${colors.accent};
   }
   @media (max-width:${breakpoints.mobile}){
     font-size:12px;
     padding:11px 9px 11px 16px;
   }
+  svg{
+    margin-left: 19px;
+    transition:transform .3s ease-in-out;
+    transform:rotate(${props => props.isOpen ? '180':'0'}deg);
+    @media (max-width:${breakpoints.mobile}){
+      margin-left:10px;
+    }
+  }
+  
 `
 const SelectBody = styled.div`
   min-width:194px;
@@ -39,7 +46,8 @@ const SelectBody = styled.div`
   border:1px solid ${colors.textPrimary}0D;
   opacity:${props => props.show ? '1':'0'};
   visibility:${props => props.show ? 'visible':'hidden'};
-  @media (max-width:${breakpoints.mobile}){
+  transition:opacity .3s ease-in-out, visibility .3s ease-in-out;
+  @media (max-width:${breakpoints.tablet}){
     right:inherit;
     left:0;
   }
@@ -54,6 +62,10 @@ const SelectBodyInner = styled.div`
 const SelectUnit = styled.div`
   margin-bottom: 23px;
   cursor: pointer;
+  transition:color .3s ease-in-out;
+  &:hover{
+    color:${colors.accent};
+  }
   &:last-child{
     margin-bottom:0;
   }
@@ -66,13 +78,13 @@ const Select = ({values, currentValue, setValue}) => {
     key={val} 
     onClick={() => {
       setValue(val);
-      setIsOpen(false)
+      setIsOpen(false);
     }}>
       {val}
     </SelectUnit>)
   return(
     <StyledSelect>
-      <SelectHeader onClick={()=> setIsOpen(!isOpen)}>
+      <SelectHeader isOpen={isOpen} onClick={()=> setIsOpen(!isOpen)}>
         <span>{currentValue}, 2021</span>
         <Icon name='arrow-dropdown'/>
       </SelectHeader>

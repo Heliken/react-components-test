@@ -9,7 +9,13 @@ const StyledIconButton = styled.a`
   svg{
     width:100%
     height:100%;
+    transition:fill .3s ease-in-out,stroke .3s ease-in-out;
     stroke:${colors.textPrimary};
+    fill:${colors.textPrimary};
+    &:hover{
+      stroke:${colors.accent};
+      fill:${colors.accent};
+    }
   }
 `
 const IconButton = ({icon}) => {

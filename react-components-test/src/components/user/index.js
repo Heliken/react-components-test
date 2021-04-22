@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { colors } from '../../constants';
 import user from './user.jpg'
 
 const StyledUser=styled.a`
   display: flex;
   align-items: center;
+  transition: color .3s ease-in-out;
+  &:hover{
+    color:${colors.accent}
+  }
 `
 const StyledUserImage=styled.div`
   width: 50px;

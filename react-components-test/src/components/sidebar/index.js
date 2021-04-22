@@ -47,7 +47,6 @@ const StyledSidebar = styled.aside`
     opacity:${props => props.active ? '1':'0'};
     visibility:${props => props.active ? 'visible':'hidden'};
     background-color:#fff;
-
   }
 `
 const Sidebar = ({active}) => {

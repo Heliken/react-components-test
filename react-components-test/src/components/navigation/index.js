@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import NavUnit from './navigation-unit';
 import { breakpoints } from '../../constants';
+
 const navObj = [
   {
     icon:'dashboard',
@@ -27,6 +28,7 @@ const navObj = [
     text:'Action Tracking'
   },
 ]
+
 const StyledNav = styled.nav`
   display:flex;
   flex-direction:column;
