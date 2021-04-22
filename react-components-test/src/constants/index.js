@@ -6,16 +6,8 @@ export const colors = {
   border: '#DEDFE2',
   scrollbarBg:'#E8EAF0'
 };
-
-export const scrollbarStyles = (props) => `
-  &::-webkit-scrollbar {
-    width:5px;
-    border-radius:2.5px;
-    background-color:${colors.scrollbarBg}
-  }
-  &::-webkit-scrollbar-thumb{
-    border-radius:2.5px;
-    background-color:${colors.textSecondary}
-  }
-
-`;
+export const breakpoints = {
+  smallDesktop:`1200px`,
+  tablet:'1024px',
+  mobile:'600px'
+}

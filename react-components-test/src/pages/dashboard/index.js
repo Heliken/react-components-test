@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { colors } from '../../constants';
+import { colors, breakpoints } from '../../constants';
+import { scrollbarStyles } from '../../helpers/style-helpers';
 import Page from '../../components/page';
 import Select from '../../components/select';
 import Table from '../../components/table';
@@ -48,6 +49,12 @@ const DashboardHeader=styled.div`
   align-items:flex-end;
   justify-content:space-between;
   margin-bottom: 12px;
+  @media (max-width:${breakpoints.mobile}){
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    margin-bottom: 4px;
+  }
 `
 
 const DashBoardTitle=styled.h1`
@@ -55,11 +62,26 @@ const DashBoardTitle=styled.h1`
   font-size:40px;
   line-height:48px;
   margin:0;
+  margin-right:20px;
   span{
     color:${colors.accent}
   }
+  @media (max-width:${breakpoints.mobile}){
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom:15px;
+  }
 `
 const DashboardBody=styled.div`
+  @media (max-width:${breakpoints.mobile}){
+    padding-top:11px;
+    ${scrollbarStyles};
+    flex:1;
+    overflow-x:hidden;
+    overflow-y:auto;
+    width: calc(100% + 10px);
+    padding-right: 7px;
+  }
 `
 
 const Dashboard = () => {

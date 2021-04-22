@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
-import { colors, scrollbarStyles } from '../../constants';
+import { colors, breakpoints } from '../../constants';
+import { scrollbarStyles } from '../../helpers/style-helpers';
 import Icon from '../icon';
 
 const StyledSelect = styled.div`
@@ -13,8 +14,16 @@ const SelectHeader = styled.div`
   border:1px solid ${colors.border};
   padding:11px 16px;
   cursor:pointer;
+  white-space: nowrap;
   svg{
     margin-left: 19px;
+    @media (max-width:${breakpoints.mobile}){
+      margin-left:10px;
+    }
+  }
+  @media (max-width:${breakpoints.mobile}){
+    font-size:12px;
+    padding:11px 9px 11px 16px;
   }
 `
 const SelectBody = styled.div`
@@ -30,6 +39,10 @@ const SelectBody = styled.div`
   border:1px solid ${colors.textPrimary}0D;
   opacity:${props => props.show ? '1':'0'};
   visibility:${props => props.show ? 'visible':'hidden'};
+  @media (max-width:${breakpoints.mobile}){
+    right:inherit;
+    left:0;
+  }
 `
 /* ↓ added to position scrollbar according to design */
 const SelectBodyInner = styled.div`
@@ -50,7 +63,8 @@ const Select = ({values,defaultValue}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState(defaultValue ? defaultValue : values[0]);
 
-  const selectUnits = values.map((val) => <SelectUnit 
+  const selectUnits = values.map((val) => <SelectUnit
+    key={val} 
     onClick={() => {
       setTitle(val);
       setIsOpen(false)

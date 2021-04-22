@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Icon from '../../icon';
-
+import { breakpoints } from '../../../constants';
 const StyledNavUnit = styled.a`
   display: flex;
   align-items: center;
@@ -14,6 +14,9 @@ const StyledNavUnit = styled.a`
   }
   &:last-child {
     margin-bottom: 0;
+  }
+  @media (max-width:${breakpoints.tablet}){
+    margin-bottom:1px;
   }
 `
 
